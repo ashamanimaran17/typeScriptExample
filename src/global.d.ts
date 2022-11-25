@@ -6,5 +6,5 @@ type MenuItem = {
     img: string,
     desc:  string
 }
-//typescript-comment 
+//typescript-example 
 //MenuItem is used in multiple places so added the type in global.d.ts to add it to global namespace

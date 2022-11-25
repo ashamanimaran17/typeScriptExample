@@ -5,9 +5,12 @@ https://github.com/john-smilga/react-projects/tree/master/05-menu
 
 - added typescript to the project and changed the file names to tsx to have it compiled by typescript
 
-added comments to the typescript files in places where typescript is added for easy checking with //typescript-comment
+added comments to the typescript files in places where typescript is added for easy checking with //typescript-example
 
 to run this project in local
+
 npm install
+
 npm run build
+
 npm run start

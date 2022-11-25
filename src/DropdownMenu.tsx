@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useRef} from "react";
 import styled from "styled-components";
 import {useOnClickOutside} from "./UseOnClickOutside";
-interface DropdownMenuParams{ //typescript-comment ex interface - but type is preferable
+interface DropdownMenuParams{ //typescript-example ex interface - but type is preferable
     items: string[];
     categorySelected: Function;
 }
@@ -9,7 +9,7 @@ interface DropdownParams{
     isOpen: boolean;
     innerRef:any;
 }
-const Dropdown = styled.ul<DropdownParams> ` //typescript-comment ex usage in styled components
+const Dropdown = styled.ul<DropdownParams> ` //typescript-example ex usage in styled components
 display:  ${p => p.isOpen ? "block" : "none"};
 position:absolute;
 top:20;
@@ -31,15 +31,15 @@ width:100%;
 export const DropdownMenu= ({items, categorySelected}:DropdownMenuParams) => {
  const [selectedItem, setSelectedItem]= useState("");
  const [isOpen, setIsOpen] = useState(false);
- const ref= useRef<HTMLDivElement>(null); //typescript-comment in useRef -  it’s important to pass null as the default value
+ const ref= useRef<HTMLDivElement>(null); //typescript-example in useRef -  it’s important to pass null as the default value
  useEffect(() => {
     setSelectedItem(items[0]);
  }, [items])
- const handler = (event:Event) => { //typescript-comment in typing the event - we might want to use MouseEvent here but useOnClickOutside expects Event
+ const handler = (event:Event) => { //typescript-example in typing the event - we might want to use MouseEvent here but useOnClickOutside expects Event
     setIsOpen(false);
  }
  useOnClickOutside(ref, handler);
- const handleBlur:React.FocusEventHandler<HTMLUListElement> = (event) => { //typescript-comment in typing the eventhandler for focus event
+ const handleBlur:React.FocusEventHandler<HTMLUListElement> = (event) => { //typescript-example in typing the eventhandler for focus event
         // if the blur was because of outside focus
         // currentTarget is the parent element, relatedTarget is the clicked element
                 if (!event.currentTarget.contains(event.relatedTarget as Node)) {

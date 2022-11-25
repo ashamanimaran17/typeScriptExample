@@ -2,7 +2,7 @@ import React from 'react';
 type MenuParams = {
   menuItems: MenuItem[];
 };
-const Menu = ({menuItems}: MenuParams) => { //typescript-comment create type for MenuItem[] and use it 
+const Menu = ({menuItems}: MenuParams) => { //typescript-example create type for MenuItem[] and use it 
   return <section className="section">
     <div className= "section-center">
       {

@@ -1,6 +1,6 @@
 import React from 'react';
 import {DropdownMenu} from "./DropdownMenu";
-type CategoriesParams = { //typescript-comment defining type for destructured props
+type CategoriesParams = { //typescript-example defining type for destructured props
   categories: string[];
   categorySelected: Function;
 };

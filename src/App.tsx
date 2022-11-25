@@ -4,8 +4,8 @@ import Categories from './Categories';
 import items from './data';
 
 function App() {
-  const [categories, setCategories] = useState<string[]>([]);//typescript-comment defining type for useState setter
-  const [menuItems, setMenuItems] = useState<MenuItem[]>([]);//typescript-comment defining type for useState setter
+  const [categories, setCategories] = useState<string[]>([]);//typescript-example defining type for useState setter
+  const [menuItems, setMenuItems] = useState<MenuItem[]>([]);//typescript-example defining type for useState setter
   const [category, setCategory] = useState("");
   useEffect(()=> {
    const temp = items.reduce((acc, curr) => {
@@ -19,7 +19,7 @@ function App() {
   },[])
   
   useEffect(()=> {
-    const temp = items.reduce((acc:MenuItem[], curr) => {//typescript-comment defining type for accumulator
+    const temp = items.reduce((acc:MenuItem[], curr) => {//typescript-example defining type for accumulator
       if((category === "All") || (category === curr.category)){
         acc.push(curr)
       }
@@ -28,7 +28,7 @@ function App() {
     setMenuItems(temp);
   }, [category]);
 
-  const categorySelected = (categoryName: string) => {//typescript-comment defining type for function parameter
+  const categorySelected = (categoryName: string) => {//typescript-example defining type for function parameter
     setCategory(categoryName)
   };
 
